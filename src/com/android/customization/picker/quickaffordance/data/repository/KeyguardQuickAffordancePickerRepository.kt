@@ -44,6 +44,8 @@ class KeyguardQuickAffordancePickerRepository(
         return flags.isQuickAffordancesEnabled(context)
     }
 
+    private val scope: CoroutineScope
+) {
     /** List of slots available on the device. */
     val slots: Flow<List<SlotModel>> =
         client.observeSlots().map { slots -> slots.map { slot -> slot.toModel() } }

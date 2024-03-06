@@ -71,6 +71,12 @@ class KeyguardQuickAffordancePickerRepositoryTest {
             )
     }
 
+    // We need at least one test to prevent Studio errors
+    @Test
+    fun creationSucceeds() {
+        assertThat(underTest).isNotNull()
+    }
+
     @After
     fun tearDown() {
         Dispatchers.resetMain()
@@ -81,4 +87,5 @@ class KeyguardQuickAffordancePickerRepositoryTest {
     fun creationSucceeds() {
         assertThat(underTest).isNotNull()
     }
+
 }
